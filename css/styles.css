@@ -1,0 +1,124 @@
+@font-face {
+  font-family: "Futura PT";
+  src: url("../fonts/FuturaPT-Book.woff2") format("woff2"),
+  url("../fonts/FuturaPT-Book.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Futura PT";
+  src: url("../fonts/FuturaPT-Medium.woff2") format("woff2"),
+  url("../fonts/FuturaPT-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Futura PT";
+  src: url("../fonts/FuturaPT-Bold.woff2") format("woff2"),
+  url("../fonts/FuturaPT-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  font-family: "Futura PT", "Arial", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.2;
+  color: #000000;
+  background-color:#FFFFFF; 
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 1390px;
+  padding: 0 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.stats-section {
+  background-color: #ffcc29;
+}
+
+.stats {
+  max-width: 870px;
+  display: flex;
+  padding: 30px 35px;
+  margin: 0 auto;
+  color: #19456b;
+  background-color: #ffcc29;
+  list-style-type: none;
+}
+
+.stats-item {
+  position: relative;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 20px;
+  font-size: 22px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.stats-item:not(:last-child)::after {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 60px;
+  background-color: #fff;
+  content: '';
+}
+
+.stat-number {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.stat-desc {
+  margin-top: 12px;
+  margin-bottom: 0;
+}
