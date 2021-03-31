@@ -393,10 +393,15 @@ img{
   display: block;
   width: 455px;
   height: 468px;
+  transition: transform 0.5s ease;
+  object-fit: cover;
 }
 .projects-link:hover .project-heading {
   transition: 0.7 ease;
   display: block;
+}
+.projects-link:hover .projects-img{
+  transform: scale(0.9);
 }
 .project-heading {
   display: none;
@@ -637,11 +642,87 @@ img{
   border: none;
 }
 
+.menu-button:focus {
+  outline: 0;
+}
+
+@media (min-aspect-ratio: 16/9){
+  #videoBg {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-aspect-ratio: 16/9){
+  #videoBg {
+    width: auto;
+    height: 100%;
+  }
+}
+
+
 @media only screen and (max-width: 1100px) {
   .about-img {
     max-width: 400px;
     height: 300px;
     object-fit: cover;
+  }
+}
+
+@media only screen and (max-width:1050px) {
+  .page-heading {
+    font-size: 50px;
+    max-width: 700px;
+  }
+  .projects-img {
+    width: 355px;
+    height: 368px;
+  }
+  .contacts-location-img{
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width:950px) {
+  .logo-span {
+    font-size: 18px;
+  }
+  .projects-img {
+    max-width: 555px;
+    height: 568px;
+  }
+}
+
+@media only screen and (max-width:900px) {
+  .projects-img {
+    max-width: 455px;
+    height: 468px;
+  }
+}
+
+@media only screen and (max-width:870px) {
+  .contacts-form {
+    margin-right: 50px;
+  }
+}
+
+@media only screen and (max-width:800px) {
+  .contacts-info {
+    flex-wrap: wrap;
+  }
+  .contacts-form {
+    margin-right: 0;
+  }
+  .contacts-work-phone {
+    font-size: 20px;
+  }
+  .site-footer-content {
+    flex-wrap: wrap;
+  }
+  .footer-copyright {
+    margin-right: 0;
+    margin-bottom: 25px;
+    text-align: center;
   }
 }
 
@@ -657,6 +738,74 @@ img{
     order: -1;
     max-width: 850px;
     height: 400px;
+  }
+}
+
+@media only screen and (max-width:780px) {
+  .site-header {
+    background: linear-gradient(90deg, rgb(255, 204, 41) 0%, rgb(255, 204, 41) 10%, rgb(255, 204, 41) 10%, rgb(255, 204, 41) 100%);
+  }
+  .site-nav {
+    display: none;
+  }
+  .menu-button {
+    display: block;
+  }
+  .page-heading {
+    font-size: 40px;
+    max-width: 700px;
+  }
+  .page-down-link img {
+    width: 50px;
+    height: 40px;
+  }
+  .projects-img {
+    max-width: 355px;
+    height: 368px;
+  }
+  .clients-img {
+    width: 110px;
+    height: 110px;
+  }
+  .clients-img-on {
+    width: 110px;
+    height: 110px;
+  }
+  .site-header-open .site-nav{
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 204, 41);
+    padding: 50px;
+    padding-top: 100px;
+    font-size: 25px;
+  }
+  .site-header-open .site-nav-list{
+    flex-direction: column;
+    align-items: center;
+  }
+  .site-header-open .site-nav-item {
+    margin-bottom: 30px;
+  }
+  .site-header-open .site-nav-link{
+    color:rgba(30,45,59,1);
+    font-weight: bold;
+  }
+
+  .site-header-open .site-nav-link:hover{
+    color:rgba(30,45,59,0.6);
+    font-weight: bold;
+  }
+  .site-header-open .menu-button {
+    position: fixed;
+    z-index: 15;
+    top: 25px;
+    right: 25px;
+    background-image: url("../img/close-button.svg");
   }
 }
 
