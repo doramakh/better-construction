@@ -50,6 +50,7 @@ body {
   line-height: 1.2;
   color: #000000;
   background-color:#FFFFFF;
+  overflow-x: hidden;
 }
 
 img{
@@ -128,6 +129,7 @@ img{
   position: relative;
   display: flex;
   justify-content: center;
+  align-items: center;
   background-color: #f7f7f7;
 }
 
@@ -268,6 +270,36 @@ img{
   }
 }
 
+@media only screen and (max-width: 1100px) {
+  .about-img {
+    width: 400;
+    height: 300px;
+    object-fit: cover;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .about-section {
+    flex-direction: column;
+  }
+  .about-content{
+    max-width: 850px;
+  }
+
+  .about-img {
+    order: -1;
+    max-width: 850px;
+    height: 400px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .about-img {
+    max-width: 700px;
+    height: 300px;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .stat-number {
     font-size: 24px;
@@ -279,6 +311,14 @@ img{
 
   .stats-item:not(:last-child)::after {
     height: 45px;
+  }
+
+  .service {
+    width: 350px;
+  }
+
+  .service-img {
+    width: 350px;
   }
 }
 
